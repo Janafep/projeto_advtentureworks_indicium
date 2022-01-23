@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: aw_erp
+    schema: CursoIndicium_ProjetoFinal_AdventureWorks_Kondado
+    description: This is the Adventures Works erp postgres database replica
+    tables:
+      - name: sales_salesorderdetail
+        columns:
+          - name: salesorderid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+      - name: person_address
+      - name: sales_creditcard
+      - name: sales_customer
+      - name: sales_salesorderheader
+      - name: sales_salesorderheadersalesreason
+      - name: sales_salesreason
+      - name: sales_salesterritory
